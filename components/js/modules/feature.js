@@ -22,7 +22,6 @@ function header_main(){
 
 
 
-
 function againStart(){ homePageTextAnimation() }
 function homePageTextAnimation(){
     let txtAnima = document.querySelector("[animate_text_home]");
@@ -202,7 +201,6 @@ function homePageTextAnimation(){
 
 
 
-
 function mouseMoveBox(){
     let body = document.body;
     document.addEventListener("mousemove",(e)=>{
@@ -216,7 +214,6 @@ function mouseMoveBox(){
     })
 
 }mouseMoveBox();
-
 
 
 
@@ -317,7 +314,6 @@ function circularProgressBar(){
 
 
 
-
 function secButtonFun(){
     let html = `
 <div class="star-1">
@@ -384,7 +380,6 @@ document.addEventListener("DOMContentLoaded",() => secButtonFun());
 
 
 
-
 function backToHomeBox(){
     let backToHomeBox = document.querySelector("[backToHomeBox]")
 
@@ -401,8 +396,33 @@ function backToHomeBox(){
             },400);
         }
     });
+}backToHomeBox();
+
+
+
+function circular_progress_height_managed(){
+    let box = document.querySelector("[circular_progress_parent_box]");
+    let clickBtn = document.querySelector("[show_more_circular_progress_btn]");
+    let absoluteBottom = document.querySelector("[absoute_bottom_box_circular_progress]");
+    console.log(box.clientHeight);
+    clickBtn.addEventListener("click",()=>{
+        console.log("SS");
+        defaultHeight();
+        clickBtn.classList.add("hidden");
+        absoluteBottom.classList.add("hidden");
+    });
+
+    function defaultHeight(){
+        document.querySelector("[circular_progress_parent_box]").classList.replace('h-[850px]','h-[auto]');
+    }
+    
+    if(box.clientHeight > 850){
+        document.querySelector("[circular_progress_parent_box]").classList.add('h-[850px]');
+    }
+
 }
-backToHomeBox();
+circular_progress_height_managed();
+
 
 }
 

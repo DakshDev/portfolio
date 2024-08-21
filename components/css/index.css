@@ -174,10 +174,11 @@ img{border-radius: 6px}
     grid-gap: 10px;
     justify-content: center;
 }
-
-
-
-
+[absoute_bottom_box_circular_progress]{
+    box-shadow: 0px 0px 100px 100px var(--bg-clr);
+    background: var(--bg-clr);
+}
+/* show_more_circular_progress_btn */
 
 
 

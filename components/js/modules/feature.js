@@ -385,22 +385,25 @@ function circular_progress_height_managed(){
     let box = document.querySelector("[circular_progress_parent_box]");
     let clickBtn = document.querySelector("[show_more_circular_progress_btn]");
     let absoluteBottom = document.querySelector("[absoute_bottom_box_circular_progress]");
-    console.log(box.clientHeight);
     clickBtn.addEventListener("click",()=>{
-        console.log("SS");
-        defaultHeight();
-        clickBtn.classList.add("hidden");
-        absoluteBottom.classList.add("hidden");
+        box.classList.replace('h-[1000px]','h-auto');
+            absoluteBottom.style.display = "none"
+            clickBtn.style.display = "none"
     });
 
-    function defaultHeight(){
-        document.querySelector("[circular_progress_parent_box]").classList.replace('h-[850px]','h-[auto]');
-    }
+    function inner(){
+        if(window.innerWidth > 1114){
+            box.classList.replace('h-[1000px]','h-auto');
+            absoluteBottom.style.display = "none"
+            clickBtn.style.display = "none"
+        }else{
+            box.classList.replace('h-auto','h-[1000px]');
+            absoluteBottom.style.display = "block"
+            clickBtn.style.display = "block"
+        }
+    }inner();
+    window.addEventListener("resize",()=> inner() )
     
-    if(box.clientHeight > 850){
-        document.querySelector("[circular_progress_parent_box]").classList.add('h-[850px]');
-    }
-
 }
 circular_progress_height_managed();
 

@@ -3,25 +3,6 @@ import {html_svg, css_svg, js_svg, mongoDB_svg, expressjs_svg, react_svg, nodejs
 
 function features(){
     
-function header_main(){
-
-    window.addEventListener("scroll",(e)=>{
-        if(window.pageYOffset < 10){
-            document.querySelector("[header_main]").classList.remove("bg-[#23232383]");
-            document.querySelector("[header_main]").classList.remove("backdrop-blur-xl");
-        }
-    })
-    window.addEventListener("wheel",(e)=>{
-        if(e.deltaY == 100){
-            document.querySelector("[header_main]").classList.add("bg-[#23232383]");
-            document.querySelector("[header_main]").classList.add("backdrop-blur-xl");
-        }   
-    });
-
-}header_main()
-
-
-
 function againStart(){ homePageTextAnimation() }
 function homePageTextAnimation(){
     let txtAnima = document.querySelector("[animate_text_home]");

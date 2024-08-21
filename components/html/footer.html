@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+<style>
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.svgParent{
+    box-sizing: content-box;
+    display: block;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    border-radius: 4px;
+    background: var(--sec-clr);
+}
+*{
+    color: #ffffff;
+    fill: #ffffff;
+}
+.svgParent:hover{
+    background: #ffffff;
+}
+.svgParent:hover *{
+    color: var(--sec-clr);
+    fill: var(--sec-clr);
+}
+.svgParent:active{
+    opacity: 0.8;
+}
+[phone_SVG], [email_SVG]{
+    background: var(--txt-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+[phone_SVG] *, [email_SVG] *{
+    color: var(--sec-clr);
+    fill: var(--sec-clr);
+}
+.targetChild{
+    left: 10px;
+    top: 10px;
+    transition: all ease-in-out 0.3s;
+}
+.hoverParent:hover > .targetChild{
+    left: 0;
+    top: 0;
+}
+.hoverParent:active{ scale: 0.99; }
+</style>
+<body class="Theme1">
+    
+    <footer class="p-10 h-full w-full bg-bg2 grid items-center content-center relative">
+        <div class="grid md:flex items-center justify-center md:gap-[20px] gap-10 pb-10">
+            <div class="grid gap-4 md:w-[50%]">
+                <h1 class="mainHeading text-pri">Get In Touch</h1>
+                <p class="leading-normal">I'm excited to share my latest updates, posts, and more with you. By following my social media links, you'll never miss out on any of my new and exciting content.</p>
+                <div class="flex items-center justify-start gap-2">
+                    <span class="svgParent" my_instagram_link instagram_SVG title="instagram">instagram</span>
+                    <span class="svgParent" my_github_link github_SVG title="github">gitHub</span>
+                    <span class="svgParent" my_tree_link earth_SVG title="linktree">All Sites</span>
+                </div>
+            </div>
+            <div class="flex gap-5 flex-wrap items-center md:justify-end justify-between md:w-[50%]">
+                <div class="hoverParent relative grid gap-5 content-center items-center rounded-tl-xl rounded-br-xl max-md:w-[246.5px] max-lsm:w-[100%] w-[250px] h-[150px] p-5 bg-sec">
+                    <div class="relative z-10 flex items-center justify-center">
+                        <div class="svgParent" phone_SVG></div>
+                    </div>
+                    <div class="text-center relative z-10 text-[14px] font-Fone">92+ 332-3041-190</div>
+                    <div class="targetChild absolute size-full bg-sec opacity-30 rounded-tl-xl rounded-br-xl"></div>
+                </div>
+                <div class="hoverParent relative grid gap-5 content-center items-center rounded-tl-xl rounded-br-xl max-md:w-[246.5px] max-lsm:w-[100%] w-[250px] h-[150px] p-5 bg-sec">
+                    <div class="relative z-10 flex items-center justify-center">
+                        <div class="svgParent" email_SVG></div>
+                    </div>
+                    <div class="text-center relative z-10 text-[14px] font-Fone">dakshkishore99@outlook.com</div>
+                    <div class="targetChild absolute size-full bg-sec opacity-30 rounded-tl-xl rounded-br-xl"></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center text-center absolute bottom-2 left-[50%] translate-x-[-50%]">
+            <div>
+                <span class="text-[14px]">&#169; 2024</span>
+                <span class="text-[14px]">&nbsp;|&nbsp;</span>
+                <span class="text-[14px]">Daksh Kishore</span>
+            </div>
+        </div>
+    </footer>
+
+<script src="../js/innerAssets/svgs/iconsvg.js"></script>
+<script type="module" src="../js/modules/siteLinks.js"></script>
+<script async>
+    let body = document.body;
+    document.addEventListener("mousemove",(e)=>{
+        let elm = document.createElement("div");
+        elm.setAttribute("class","mouseMoveBox")
+        elm.setAttribute("style",`left: ${e.clientX}px; top: ${e.clientY + 10}px;`);
+        elm.onanimationend=()=>{
+            elm.remove();
+        }
+        body.insertAdjacentElement("beforeend",elm);
+    });
+</script>
+</body>
+</html>

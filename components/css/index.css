@@ -1,0 +1,228 @@
+/* ================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ================= */
+
+
+
+/* Theme 1 */
+.Theme1{
+    --bg-clr: #212429;
+    --bg-clr2: #323741;
+    --pri-clr: #7a5af5;
+    --sec-clr: #657791;
+    --txt-clr: #ffffff;
+}
+
+
+
+
+/* Fonts */
+@font-face {
+    font-family: Fone;
+    src: url(../cdns/fonts/Rubik/Rubik-Light.woff2);
+}
+@font-face {
+    font-family: Ftwo;
+    src: url(../cdns/fonts/Rubik/Rubik-Bold.woff2);
+}
+@font-face {
+    font-family: Fthree;
+    src: url(../cdns/fonts/Rubik/Rubik-ExtraBold.woff2);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--txt-clr);
+    font-family: Fone;
+    font-size: 17px;
+    transition: none;
+    text-decoration: none;
+    cursor: grab !important;
+}
+html:active *{
+    cursor: grabbing !important;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+
+
+/* Main Style */
+img{border-radius: 6px}
+.mouseMoveBox{
+    height: 0px !important;
+    width: 0px !important;
+    background-color: var(--pri-clr);
+    border: 0px solid var(--pri-clr);
+    border-radius: 1000px;
+    position: fixed;
+    animation: mouseTrailAnimi 1.5s linear forwards;
+    box-shadow: 0px 0px 10px 10px var(--pri-clr);
+    z-index: 9999;
+}
+@keyframes mouseTrailAnimi {
+    0%{
+        transform: scale(0%);
+    }
+    10%{
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0) translateY(50px);
+        opacity: 0;
+    }
+}
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {background: var(--bg-clr);}
+::-webkit-scrollbar-thumb {
+    background: var(--bg-clr2);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {background: var(--bg-clr2)}
+::selection{
+    background: #7a7a7ab6;
+}
+
+
+
+
+
+/* ================================================================ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ================================================================ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ================================================================ */
+
+
+
+
+
+/* ================================================================ */
+                    /* Container */
+/* ================================================================ */
+/* [container_main]{} */
+/* =========================  Header ========================= */
+[header]{
+    background: rgba(255, 255, 255, 0.040);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+/* ==========================  Nav Bar ============================ */
+[navBgAnim_Own]{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+[navBgAnim_Own] > div{
+    height: 0px;
+    width: 100%;
+    position: relative;
+    background: var(--bg-clr);
+    transition: height ease-in-out 0.4s;
+}
+/* =========================  Main ========================= */
+[main_one]{
+    background-image: url(../cdns/img/1.webp);
+    /* background: var(--bg-clr); */
+    background-size: cover;
+    background-position: center right;
+    min-height: 600px;
+    height: 100vh;
+    width: 100%;
+}
+/* =========================  Section Two ========================= */
+[section_two]{
+    background: var(--bg-clr);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+[circular_progress]{
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: conic-gradient(var(--pri-clr) 3.6deg, #b1b0b0 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+[circular_progress]::before{
+    content: '';
+    position: absolute;
+    height: 85%;
+    width: 85%;
+    background: var(--bg-clr2);
+    border-radius: 50%;
+}
+[progressBox_Elm]{
+    flex: 1 1 calc(33% - 10px);
+}
+[progressBoxForAppend]{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+/* ================================================================ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ================================================================ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ================================================================ */
+
+
+
+
+
+/* ================================================================ */
+                    /* Style Using Tailwind */
+/* ================================================================ */
+
+@layer components{
+.darkOpacityBg{@apply fixed left-0 top-0 size-full bg-[#00000040]}
+.mainHeading{@apply xl:text-[60px] lg:text-[50px] lsm:text-[40px] sm:text-[34px] text-[30px] leading-none font-Ftwo}
+.heading{@apply xl:text-[30px] lg:text-[25px] lsm:text-[22px] text-[20px] leading-none font-Ftwo}
+.secHeading{@apply  lg:text-[20px] sm:text-[18px] text-[16px] leading-none font-Ftwo}
+.description{@apply xl:text-[17px] lg:text-[16px] md:text-[15px] text-[14px] leading-normal font-Fone}
+.underlineHeading{
+    display: inline-block;
+    position: relative;
+}
+.underlineHeading::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -10px;
+    border: 3px solid var(--pri-clr);
+    width: 80%;
+    border-radius: 10px;
+}
+.underlineHeading::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    border: 3px solid var(--pri-clr);
+    width: 60%;
+    border-radius: 10px;
+}
+}

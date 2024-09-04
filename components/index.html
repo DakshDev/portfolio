@@ -26,7 +26,7 @@
     <div container_main class="relative overflow-x-hidden bg-bg">
         <!-- Header -->
         <header header_main class="fixed left-0 top-0 h-[80px] w-full bg-bg flex justify-between items-center max-sm:p-2.5 p-4 z-50">
-            <div class="flex"><h1 class="heading">Daksh Kishore</h1></div>
+            <div class="flex"><h1 class="heading">DAKSH KISHORE</h1></div>
             <div>
                 <label class="menubar scale-[0.5] sm:scale-[0.6] md:scale-[0.7]" for="checkMenuBox">
                     <input type="checkbox" id="checkMenuBox" openMenuBoxBtn>
@@ -179,14 +179,17 @@
                     <!-- Skill Sec -->
                     <div class="grid gap-10 relative">
                         <div circular_progress_parent_box class="grid gap-20 overflow-hidden relative h-auto">
-                            <div absoute_bottom_box_circular_progress class="block absolute left-0 bottom-0 w-full h-2 z-10"></div>
                             <div><span class="mainHeading uppercase underlineHeading">My Skills</span></div>
-                            <div progressBoxForAppend class="flex flex-wrap gap-2.5 z-0">
-                                <!-- LangAndFrame append here -->
+                            <!-- For Large Device -->
+                            <div progressBoxForAppend class="flex flex-wrap gap-2.5 z-0 max-lg:hidden">
+                                <!-- larg device progress  append here -->
                             </div>
-                        </div>
-                        <div class="flex justify-center items-center">
-                            <span show_more_circular_progress_btn class="z-20 block text-center bg-pri rounded-md py-1.5 p-3 font-bold active:opacity-85">Show More</span>
+                            <!-- For Small Device -->
+                            <div class="hidden max-lg:flex gap-2.5 justify-center">
+                                <div smallDeviceProgressAppend class="w-[600px] max-md:w-full">
+                                    <!-- small device progress bar append here -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Experties -->
@@ -194,7 +197,7 @@
                         <div><span class="mainHeading underlineHeading">MY EXPERTISE</span></div>
                         <div class="grid gap-10 items-start">
                             <!-- Web Development Section -->
-                            <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-r from-bg2 to-transparent from-0% to-100% rounded-s-[1000px] max-lg:rounded-s-[40px] max-md:rounded-s-[20px]">
+                            <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-r from-bg2 to-transparent from-0% to-100% rounded-s-[1000px] max-lg:rounded-s-[40px] max-md:rounded-s-[20px] max-md:bg-bg2 max-md:rounded-xl">
                                 <div class="w-[40%] flex justify-center items-center max-md:hidden">
                                     <img loading="lazy" src="./cdns/img/webDevImg.webp" alt="Web Development Image" class="h-[300px] max-lg:h-[250px]">
                                 </div>
@@ -205,7 +208,7 @@
                             </section>
                             <!-- MERN Development Section -->
                             <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-l from-bg2 to-transparent from-0% to-100% rounded-e-[1000px] max-lg:rounded-e-[40px] max-md:rounded-e-[20px]">
-                                <div class="w-[60%] max-md:w-full max-md:p-5 md:py-10 grid items-center content-center gap-4 md:text-right">
+                                <div class="w-[60%] max-md:w-full max-md:p-5 md:py-10 grid items-center content-center gap-4 md:text-right max-md:bg-bg2 max-md:rounded-xl">
                                     <h1 class="heading text-sec">Professional MERN Developer</h1>
                                     <p>I am a dedicated MERN stack web developer with 1 year of experience in building and maintaining high-quality web applications. My expertise lies in leveraging the MERN stack, which includes MongoDB, Express.js, React, and Node.js, to deliver robust and scalable solutions.</p>
                                 </div>
@@ -214,17 +217,17 @@
                                 </div>
                             </section>
                             <!-- SEO Service Section -->
-                            <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-r from-bg2 to-transparent from-0% to-100% rounded-s-[1000px] max-lg:rounded-s-[40px] max-md:rounded-s-[20px]">
+                            <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-r from-bg2 to-transparent from-0% to-100% rounded-s-[1000px] max-lg:rounded-s-[40px] max-md:rounded-s-[20px] max-md:bg-bg2 max-md:rounded-xl">
                                 <div class="w-[40%] flex justify-center items-center max-md:hidden">
                                     <img loading="lazy" src="./cdns/img/seoImg.webp" alt="SEO Specialist Image" class="h-[300px] max-lg:h-[250px]">
                                 </div>
                                 <div class="w-[60%] max-md:w-full max-md:p-5 md:py-10 grid items-center content-center gap-4">
-                                    <h1 class="heading text-sec">Professional SEO Specialist</h1>
-                                    <p>I am a skilled SEO Specialist with 1 year of experience in optimizing websites to improve their search engine rankings and drive organic traffic. My expertise involves employing a range of SEO strategies and techniques to enhance online visibility and achieve measurable results.</p>
+                                    <h1 class="heading text-sec">Professional SEO Expert</h1>
+                                    <p>I am a skilled SEO Expert with 1 year of experience in optimizing websites to improve their search engine rankings and drive organic traffic. My expertise involves employing a range of SEO strategies and techniques to enhance online visibility and achieve measurable results.</p>
                                 </div>
                             </section>
                             <!-- SMM Service Section -->
-                            <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-l from-bg2 to-transparent from-0% to-100% rounded-e-[1000px] max-lg:rounded-e-[40px] max-md:rounded-e-[20px]">
+                            <section class="min-h-[350px] max-md:min-h-[300px] flex bg-gradient-to-l from-bg2 to-transparent from-0% to-100% rounded-e-[1000px] max-lg:rounded-e-[40px] max-md:rounded-e-[20px] max-md:bg-bg2 max-md:rounded-xl">
                                 <div class="w-[60%] max-md:w-full max-md:p-5 md:py-10 grid items-center content-center gap-4 md:text-right">
                                     <h1 class="heading text-sec">Professional SMM</h1>
                                     <p>I am a Social Media Marketing (SMM) Specialist with 1 year of experience in creating and managing effective social media campaigns that drive engagement and brand awareness. My expertise lies in developing strategies and executing campaigns across various social media platforms.</p>

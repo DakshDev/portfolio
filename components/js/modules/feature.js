@@ -281,15 +281,11 @@ function circularProgressBar(){
     new LangAndFrame("express",50,expressjs_svg).innerMain();
     new LangAndFrame("react",60,react_svg).innerMain();
     new LangAndFrame("node",90,nodejs_svg).innerMain();
-    new LangAndFrame("angular",80,angular_svg).innerMain();
-    new LangAndFrame("typescript",90,typescript_svg).innerMain();
     new LangAndFrame("tailwind",80,tailwind_svg).innerMain();
     new LangAndFrame("bootstrap",50,bootstrap_svg).innerMain();
     new LangAndFrame("git",90,git_svg).innerMain();
-    new LangAndFrame("github",90,github_svg).innerMain();
     new LangAndFrame("docker",80,docker_svg).innerMain();
     new LangAndFrame("seo",90,seo_svg).innerMain();
-    new LangAndFrame("SMM",40,smm_svg).innerMain();
 
 }circularProgressBar();
 
@@ -381,31 +377,53 @@ function backToHomeBox(){
 
 
 
-function circular_progress_height_managed(){
-    let box = document.querySelector("[circular_progress_parent_box]");
-    let clickBtn = document.querySelector("[show_more_circular_progress_btn]");
-    let absoluteBottom = document.querySelector("[absoute_bottom_box_circular_progress]");
-    clickBtn.addEventListener("click",()=>{
-        box.classList.replace('h-[1000px]','h-auto');
-            absoluteBottom.style.display = "none"
-            clickBtn.style.display = "none"
-    });
+function smallDeviceProgressFun(){
 
-    function inner(){
-        if(window.innerWidth > 1114){
-            box.classList.replace('h-[1000px]','h-auto');
-            absoluteBottom.style.display = "none"
-            clickBtn.style.display = "none"
-        }else{
-            box.classList.replace('h-auto','h-[1000px]');
-            absoluteBottom.style.display = "block"
-            clickBtn.style.display = "block"
+    class Progress{
+        constructor(lang,perc){
+            this.lang = lang;
+            this.perc = perc;
         }
-    }inner();
-    window.addEventListener("resize",()=> inner() )
-    
-}
-circular_progress_height_managed();
+
+        innerMain(){
+            let html = `<div smallDeviceParentProgressBox class="grid items-center content-center gap-1">
+                <div class="flex justify-between w-full">
+                    <span class="description font-bold">${this.lang.toUpperCase()}</span>
+                    <span class="description font-bold">${this.perc}%</span>
+                </div>
+                <div smallDeviceProgressParent class="flex">
+                    <div small-device-progress-done data-done="${this.perc}"></div>
+                </div>
+            </div>`;
+
+            document.querySelector("[smallDeviceProgressAppend]")
+            .insertAdjacentHTML("beforeend",html);
+        }
+    }
+
+    new Progress("Html",90).innerMain();
+    new Progress("css",90).innerMain();
+    new Progress("JS",90).innerMain();
+    new Progress("mongoDB",90).innerMain();
+    new Progress("express",50).innerMain();
+    new Progress("react",60).innerMain();
+    new Progress("node",90).innerMain();
+    new Progress("tailwind",80).innerMain();
+    new Progress("bootstrap",50).innerMain();
+    new Progress("git",90).innerMain();
+    new Progress("docker",80).innerMain();
+    new Progress("seo",90).innerMain();
+
+
+
+    const smallDeviceProgress = document.querySelectorAll('[small-device-progress-done]');
+
+    for (let i = 0; i < smallDeviceProgress.length; i++) {
+        smallDeviceProgress[i].style.width = smallDeviceProgress[i].getAttribute('data-done') + '%';
+        // smallDeviceProgress[i].innerText = smallDeviceProgress[i].getAttribute('data-done') + '%';
+        smallDeviceProgress[i].style.opacity = 1;
+    }
+}smallDeviceProgressFun();
 
 
 }

@@ -221,3 +221,27 @@ z-index: 2;
 .secBtnInnerPath {
 fill: var(--txt-clr);
 }
+
+
+/* Small Device  */
+[smallDeviceParentProgressBox]{
+    margin: 20px 0px;
+}
+[smallDeviceProgressParent] {
+background-color: #797979;
+border-radius: 20px;
+position: relative;
+height: 10px;
+}
+[small-device-progress-done] {
+background: linear-gradient(to right, #c795a5, var(--pri-clr));
+border-radius: 20px;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 0;
+opacity: 0;
+transition: 1s ease 0.3s;
+}

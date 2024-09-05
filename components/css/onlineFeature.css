@@ -54,6 +54,7 @@ transition: 1s;
 border-radius: 0.3em;
 font-weight: bold;
 cursor: pointer;
+box-shadow: none !important;
 }
 [navButton]::after {
 content: "";
@@ -62,7 +63,7 @@ top: -10px;
 left: 3%;
 width: 95%;
 height: 40%;
-background-color: var(--bg-clr);
+background-color: var(--bg-clr2);
 transition: 0.5s;
 transform-origin: center;
 }
@@ -74,14 +75,11 @@ top: 80%;
 left: 3%;
 width: 95%;
 height: 40%;
-background-color: var(--bg-clr);
+background-color: var(--bg-clr2);
 transition: 0.5s;
 }
 [navButton]:hover::before, [navButton]:hover::after {
 transform: scale(0)
-}
-[navButton]:hover {
-box-shadow: inset 0px 0px 25px var(--pri-clr);
 }
 
 

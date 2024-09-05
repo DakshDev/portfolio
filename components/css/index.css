@@ -11,7 +11,7 @@
     --bg-clr: #212429;
     --bg-clr2: #323741;
     --pri-clr: #7a5af5;
-    --sec-clr: #657791;
+    --sec-clr: #5b6677;
     --txt-clr: #ffffff;
 }
 
@@ -112,22 +112,6 @@ img{border-radius: 6px}
     background: rgba(255, 255, 255, 0.040);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-}
-/* ==========================  Nav Bar ============================ */
-[navBgAnim_Own]{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    display: flex;
-}
-[navBgAnim_Own] > div{
-    height: 0px;
-    width: 100%;
-    position: relative;
-    background: var(--bg-clr);
-    transition: height ease-in-out 0.4s;
 }
 /* =========================  Main ========================= */
 [main_one]{

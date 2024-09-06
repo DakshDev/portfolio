@@ -78,8 +78,12 @@ img{border-radius: 6px}
         opacity: 0;
     }
 }
-::-webkit-scrollbar {width: 5px;}
-::-webkit-scrollbar-track {background: var(--bg-clr);}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-clr);
+}
 ::-webkit-scrollbar-thumb {
     background: var(--bg-clr2);
     border-radius: 10px;

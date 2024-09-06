@@ -2,6 +2,11 @@ import {html_svg, css_svg, js_svg, mongoDB_svg, expressjs_svg, react_svg, nodejs
 
 
 function features(){
+// First Loading Box
+window.addEventListener("load",function(){
+    document.getElementById("FirstloadingBox").style.display = "none";
+});
+
     
 function againStart(){ homePageTextAnimation() }
 function homePageTextAnimation(){
@@ -179,26 +184,6 @@ function homePageTextAnimation(){
     });
 
 }homePageTextAnimation();
-
-
-
-function backToHomeBox(){
-    let backToHomeBox = document.querySelector("[backToHomeBox]")
-
-    document.addEventListener("scroll",()=>{
-        if(window.pageYOffset >= window.innerHeight/2){
-            backToHomeBox.innerHTML = `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"><path d="M15 13L12.2121 10.2121C12.095 10.095 11.905 10.095 11.7879 10.2121L9 13M7 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3H7C4.79086 3 3 4.79086 3 7V17C3 19.2091 4.79086 21 7 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>`;
-            setTimeout(()=>{
-                backToHomeBox.style.transform = "translateX(0px)";
-            },100);
-        }else{
-            backToHomeBox.style.transform = "translateX(100px)";
-            setTimeout(()=>{
-                backToHomeBox.innerHTML = "";
-            },400);
-        }
-    });
-}backToHomeBox();
 
 
 

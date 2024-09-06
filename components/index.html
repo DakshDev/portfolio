@@ -18,10 +18,11 @@
 [checked-button]::after,[checked-button]::before {transform: scale(0)}
 [checked-button]{box-shadow: inset 0px 0px 25px var(--pri-clr)}
 </style>
-<body class="Theme1"> 
+<body class="Theme1 overflow-auto"> 
+<!-- Loading -->
+<div id="FirstloadingBox" class="bg-black z-[9999999] size-full fixed left-0 top-0"></div>
 
-    <!-- back to top button -->
-    <a href="#home" backToHomeBox style="transform: translateX(100px); transition: transform 0.3s ease-in-out;" class="p-1 rounded-md bg-[#ffffff33] backdrop-blur-[50px] size-[50px] fixed right-3 bottom-3 z-[40] active:bg-[#ffffff50]"></a>
+
 
     <div container_main class="relative overflow-x-hidden bg-bg">
         <!-- Header -->
@@ -79,7 +80,7 @@
         </div>
 
         <!-- main One -->
-        <main id="home" main_one class="relative">
+        <main id="home" main_one class="relative z-10">
             <div class="flex items-center justify-around size-full z-10 absolute top-[0px] left-0 p-10 max-lsm:p-5 max-sm:p-2.5 gap-[5%]">
                 <div class="flex w-[65%] max-md:w-full">
                     <div class="grid justify-start items-center content-center gap-6">
@@ -106,7 +107,7 @@
                 </div>
             </div>
         </main>
-
+        
         <!-- About + Skill + Services Section -->
         <section id="about" section_two class="relative p-10 max-lsm:p-5 max-sm:p-2.5">
             <div class="darkOpacityBg"></div>
@@ -251,7 +252,7 @@
 <!-- GSAP & Own Animation Make-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./js/innerAssets/animi.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <!-- <script type="module" src="../js/innerAssets/animationmodules/scrollAnimation.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/innerAssets/animationmodules/scrollAnimation.js"></script>
 </body>
 </html>

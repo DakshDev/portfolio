@@ -4,4 +4,4 @@ import { byClickBarBtnAnimi } from "./animationmodules/ownAni.js";
 window.addEventListener("DOMContentLoaded",()=>{
     defaultValueGSAP();
     byClickBarBtnAnimi();
-})
+});

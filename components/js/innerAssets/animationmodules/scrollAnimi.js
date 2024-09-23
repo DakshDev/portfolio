@@ -132,7 +132,7 @@ gsap.from("[progressBoxForAppend] > div",{
         trigger:"[progressBoxForAppend]",
         scroller:"body",
         start:"top 15%",
-        end:"bottom -150%",
+        end:"bottom -250%",
         // markers:true,
         scrub:1,
     }
@@ -154,7 +154,7 @@ gsap.to("[bottom_border_scrollAnimi]",{
         trigger:"[circular_progress_parent_box]",
         scroller:"body",
         start:"top -5%",
-        end:"bottom -200%",
+        end:"bottom -300%",
         // markers:true,
         pin: true,
         scrub:1,
